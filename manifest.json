@@ -1,0 +1,25 @@
+{
+  "name": "PWA Blog",
+  "short_name": "PWA Blog",
+  "icons": [
+    {
+      "src": "/images/app-icon-192x192.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/app-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Blog Posts Test 1 AMBW",
+  "dir": "ltr",
+  "lang": "en-US"
+}

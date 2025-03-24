@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <script defer src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            color: white;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #b57cca;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(265, 57%, 42%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 2%, #c31eac 0px, transparent 50%),
+                radial-gradient(at 0% 57%, hsla(343, 99%, 46%, 1) 0px, transparent 50%),
+                radial-gradient(at 85% 58%, #fbc31a 0px, transparent 50%),
+                radial-gradient(at 41% 28%, hsla(265, 57%, 42%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 83%, hsl(343, 99%, 46%) 0px, transparent 50%),
+                radial-gradient(at 10% 80%, #fdd247 0px, transparent 50%);
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            background-size: 400% 400%;
+            animation: gradient 9s infinite linear;
+
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.3);
+            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+            box-shadow: 0 0 10px rgb(247, 233, 158), 0 0 30px rgb(247, 233, 158);
+            border-radius: 10px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="top-0 relative p-8 flex justify-center items-center h-[60px] gap-x-8">
+        <a href="index.html" class="font-bold text-lg max-sm:text-base">Home</a>
+        <a href="about.html" class="font-bold text-lg max-sm:text-base">About</a>
+    </nav>
+    <main id="content" class=" w-screen">
+        <h1 class="font-semibold text-4xl text-center my-8">My Blog Posts</h1>
+        <div id="posts" class=" w-full flex flex-col justify-center items-center gap-10 px-4"></div>
+    </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('Service Worker Registered'))
+                .catch(err => console.log('SW Registration Failed', err));
+        }
+    </script>
+</body>
+
+</html>
