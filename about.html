@@ -6,6 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            color: white;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #b57cca;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(265, 57%, 42%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 2%, #c31eac 0px, transparent 50%),
+                radial-gradient(at 0% 57%, hsla(343, 99%, 46%, 1) 0px, transparent 50%),
+                radial-gradient(at 85% 58%, #fbc31a 0px, transparent 50%),
+                radial-gradient(at 41% 28%, hsla(265, 57%, 42%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 83%, hsl(343, 99%, 46%) 0px, transparent 50%),
+                radial-gradient(at 10% 80%, #fdd247 0px, transparent 50%);
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            background-size: 400% 400%;
+            animation: gradient 9s infinite linear;
+
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 
 <body>
